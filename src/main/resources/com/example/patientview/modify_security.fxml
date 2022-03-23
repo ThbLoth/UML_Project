@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: CDF4EE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.patientview.ModifySecurity">
+   <children>
+      <Label layoutX="106.0" layoutY="26.0" text="Enter your password :" translateX="-38.0" AnchorPane.leftAnchor="106.0" />
+      <PasswordField fx:id="passField" layoutX="51.0" layoutY="62.0" promptText="Password" />
+      <Button fx:id="validateBtn" layoutX="93.0" layoutY="95.0" mnemonicParsing="false" onAction="#checkPassword" text="Continue" />
+   </children>
+</AnchorPane>

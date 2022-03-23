@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: CDF4EE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.patientview.HistoryController">
+   <children>
+      <TableView fx:id="hist_table" layoutX="134.0" layoutY="100.0" prefHeight="200.0" prefWidth="331.0">
+        <columns>
+          <TableColumn fx:id="medName_col" prefWidth="171.1999969482422" text="Medication" />
+          <TableColumn fx:id="lastTime_col" prefWidth="159.2" text="Last Time Taken" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="patList" layoutX="134.0" layoutY="43.0" prefWidth="150.0" visible="false" />
+      <Button fx:id="refreshBtn" layoutX="358.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshTable" text="Refresh the table" visible="false" />
+      <Button fx:id="closeBtn" layoutX="244.0" layoutY="323.0" mnemonicParsing="false" onAction="#closeScene" text="Close this window" />
+   </children>
+</AnchorPane>

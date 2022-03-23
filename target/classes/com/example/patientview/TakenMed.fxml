@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: CDF4EE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.patientview.TakenMedController">
+   <children>
+      <ChoiceBox fx:id="MedList" layoutX="50.0" layoutY="33.0" prefWidth="150.0" />
+      <Button layoutX="74.0" layoutY="75.0" mnemonicParsing="false" onAction="#medTakenFn" text="I took this med !" />
+      <Button layoutX="70.0" layoutY="110.0" mnemonicParsing="false" onAction="#closeWindow" text="Close the window" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: CDF4EE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.patientview.MedList">
+   <children>
+      <TableView fx:id="med_tab" layoutX="107.0" layoutY="121.0" prefHeight="200.0" prefWidth="393.0">
+        <columns>
+          <TableColumn fx:id="medName_col" prefWidth="169.80003356933594" text="Medication Name" />
+          <TableColumn fx:id="medQty_col" prefWidth="109.39996337890625" text="Quantity (in pills)" />
+            <TableColumn fx:id="medDoTime_col" prefWidth="115.0" text="Dosing times (in h)" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelMed" layoutX="220.0" layoutY="42.0" text="Medication list for patient :" visible="false">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="patientNameLabel" layoutX="367.0" layoutY="42.0" textAlignment="CENTER" />
+      <Button fx:id="returnBtn" layoutX="248.0" layoutY="329.0" mnemonicParsing="false" onAction="#closeScene" text="Close this window" />
+      <Button fx:id="modifyBtn" layoutX="179.0" layoutY="365.0" mnemonicParsing="false" onAction="#open_Modify_Scene_Security" text="🔒(CAREGIVER ONLY) Modify the patient list" visible="false" />
+      <Button fx:id="refreshBTN" layoutX="168.0" layoutY="75.0" mnemonicParsing="false" onAction="#refresh_Table" text="Refresh" />
+      <ChoiceBox fx:id="patientList" layoutX="329.0" layoutY="75.0" prefWidth="150.0" visible="false" />
+   </children>
+</AnchorPane>

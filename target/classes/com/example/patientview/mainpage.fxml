@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: CDF4EE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.patientview.MainMenuController">
+   <children>
+      <Label alignment="CENTER" layoutX="240.0" layoutY="45.0" text="MY SPACE" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto Light" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="227.0" layoutY="266.0" mnemonicParsing="false" onAction="#openHistMenu" prefHeight="25.0" prefWidth="153.0" text="See My History">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font></Button>
+      <Button layoutX="227.0" layoutY="216.0" mnemonicParsing="false" onAction="#openMedListMenu" prefHeight="25.0" prefWidth="153.0" text="Medication List">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font></Button>
+      <Button fx:id="tookMedBtn" layoutX="227.0" layoutY="165.0" mnemonicParsing="false" onAction="#openTakenMedMenu" prefHeight="25.0" prefWidth="153.0" text="I Took My Medication" visible="false">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font></Button>
+      <Button layoutX="227.0" layoutY="311.0" mnemonicParsing="false" onAction="#openMedicationMenu" text="🔒 Modify Medication List">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-28.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo_sante.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="358.0" layoutY="449.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="471.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo_sante.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="disconnectBtn" layoutX="227.0" layoutY="355.0" mnemonicParsing="false" onAction="#disconnect" prefHeight="25.0" prefWidth="153.0" text="Disconnect">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

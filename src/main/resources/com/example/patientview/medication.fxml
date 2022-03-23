@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: CDF4EE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.patientview.Medication">
+   <children>
+      <Button layoutX="76.0" layoutY="71.0" mnemonicParsing="false" text="Add a new drug to the list" />
+      <TextField fx:id="drugInput" layoutX="300.0" layoutY="71.0" onAction="#addDrug" promptText="Drug name" />
+      <ChoiceBox fx:id="drugList" layoutX="300.0" layoutY="188.0" prefWidth="150.0" />
+      <Button layoutX="244.0" layoutY="293.0" mnemonicParsing="false" onAction="#CloseWindow" text="Close this window" />
+      <Line endX="201.60000610351562" layoutX="249.0" layoutY="144.0" startX="-100.0" strokeWidth="0.35" />
+      <Button layoutX="67.0" layoutY="188.0" mnemonicParsing="false" text="Remove a drug from the list" />
+   </children>
+</AnchorPane>
