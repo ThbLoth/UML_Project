@@ -71,7 +71,7 @@ public class Medication implements Initializable {
 
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) { //on page loading, we fill the choicebox
         initSelect("select m.NAME_med  from medication m","NAME_med",drugList);
     }
 }

@@ -1,5 +1,10 @@
 package com.example.patientview;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Label;
+import javafx.stage.Popup;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.Connection;
@@ -67,7 +72,7 @@ public class Notification implements Runnable{
                     for(int i=0;i<dateTab.length;i++){
                         String dbDate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(dateTab[i]);
                         if(dbDate.equals(currentDateGF)){
-                            System.out.println("Time to take " + medNameTab[i]);
+                            System.out.println("Time to take : "+medNameTab[i]);
                         }
                     }
 

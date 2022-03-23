@@ -63,8 +63,10 @@ public class HistoryController implements Initializable {
 
     @FXML
     protected void refreshTable() throws SQLException {
+        //Caregiver only method
         Connection connection = DBConnector.getConnection();
         int patID = 0;
+        //Select the user ID depending of the choice made by the caregiver
         ResultSet rs = connection.createStatement().executeQuery("select ui.ID_user  from user_information ui where ui.username ='"+patList.getValue()+"'");
         while (rs.next()){
             patID = rs.getInt("ID_user");
@@ -72,6 +74,7 @@ public class HistoryController implements Initializable {
         initTable(patID);
     }
 
+    //Fill the table method
     protected void initTable(int patID) throws SQLException {
 
         ObservableList<HistoryTable> obList = FXCollections.observableArrayList();
@@ -108,14 +111,17 @@ public class HistoryController implements Initializable {
                 userID = scanner2.nextInt();
             }
 
-            if (user_Cat ==1){
+            if (user_Cat ==1){ //if the user connected is a caregiver
                 refreshBtn.setVisible(true);
                 patList.setVisible(true);
+                //set to visible
 
                 String[] patArr = {} ;
                 Connection connection = DBConnector.getConnection();
+                //select all users that are classified as "Patient"
                 ResultSet rs = connection.createStatement().executeQuery("select ui.username from user_information ui where ui.CAT_user =2");
 
+                //fill the Choicebox with all patients names
                 while(rs.next()){
                     patArr = Arrays.copyOf(patArr,patArr.length+1);
                     patArr[patArr.length-1] = rs.getString("username");
@@ -125,7 +131,7 @@ public class HistoryController implements Initializable {
                     patList.getItems().add(patArr[i]);
                 }
 
-            }else{
+            }else{ //the user is a patient, so we init the table with its own data.
                 initTable(userID);
             }
 

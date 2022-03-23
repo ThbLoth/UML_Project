@@ -33,23 +33,22 @@ public class LoginController {
     @FXML
     protected void verifyCredentials() throws SQLException, IOException {
         String userCred = userInput.getText();
-        String passwordCred = userInput.getText();
         int userVerify=0;
         String dbPassword ="";
 
-        Connection connection = DBConnector.getConnection();
+        Connection connection = DBConnector.getConnection();//we verify if an account is registered with this username
         ResultSet rs = connection.createStatement().executeQuery("select 1  from user_information ui where ui.username ='"+userCred+"'");
         while (rs.next()){
             userVerify = rs.getInt("1");
         }
 
-        if (userVerify==1){
+        if (userVerify==1){ //if it exists, we get the stored password to compare it to the entered one
             ResultSet rs2 = connection.createStatement().executeQuery("select ui.password from user_information ui where ui.username ='"+userCred+"'");
             while (rs2.next()){
                 dbPassword = rs2.getString("password");
             }
 
-            if (passwordInput.getText().equals(dbPassword)){
+            if (passwordInput.getText().equals(dbPassword)){ //if it matches
                 //Write user cat
                 FileWriter fileWriter = new FileWriter("userCAT.txt");
                 ResultSet rs3 = connection.createStatement().executeQuery("select ui.CAT_user from user_information ui where ui.username = '"+userCred+"'");

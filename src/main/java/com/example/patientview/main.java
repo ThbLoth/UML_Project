@@ -19,11 +19,12 @@ public class main extends Application {
     }
 
     public static void main(String[] args) {
+        //start a parallel thread to manage the notifications
         Notification notification = new Notification();
         Thread thread = new Thread(notification);
-
         thread.start();
 
+        //start the app
         launch();
     }
 }
